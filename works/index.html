@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>施工事例一覧｜NS HOME - 大阪の住宅リフォーム・リノベーション</title>
+  <meta name="description" content="NS HOMEの施工事例一覧ページです。水回り・内装・リノベーション・原状回復・店舗改装など、さまざまな工事の実績をご紹介します。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="../images/favicon.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/works.css">
+</head>
+<body>
+
+  <!-- ========================================
+    ヘッダー
+  ======================================== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.png" alt="NS HOME ロゴ" class="logo-img">
+      </a>
+      <nav class="nav-desktop" aria-label="メインナビゲーション">
+        <ul class="nav-list">
+          <li><a href="../index.html">トップ</a></li>
+          <li><a href="../index.html#individual">一般のお客様へ</a></li>
+          <li><a href="../index.html#corporate">不動産・管理会社様へ</a></li>
+          <li><a href="../index.html#commercial">店舗・事業者様へ</a></li>
+          <li><a href="./index.html" style="color:#3D6B35;background-color:rgba(61,107,53,0.06);border-radius:6px;">施工事例</a></li>
+          <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile" aria-label="モバイルナビゲーション">
+      <ul class="nav-mobile-list">
+        <li><a href="../index.html">トップ</a></li>
+        <li><a href="../index.html#individual">一般のお客様へ</a></li>
+        <li><a href="../index.html#corporate">不動産・管理会社様へ</a></li>
+        <li><a href="../index.html#commercial">店舗・事業者様へ</a></li>
+        <li><a href="./index.html">施工事例</a></li>
+        <li><a href="../index.html#contact">お問い合わせ</a></li>
+        <li class="nav-mobile-contact">
+          <a href="tel:07041751099"><i class="fas fa-phone"></i> 070-4175-1099</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================================
+    ページヘッダー
+  ======================================== -->
+  <section class="works-page-header">
+    <div class="container">
+      <span class="title-en">Works</span>
+      <span class="title-ja">施工事例一覧</span>
+      <p class="page-lead">NS HOMEが手がけた施工事例をご紹介します。</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+    フィルタ
+  ======================================== -->
+  <section class="works-filter-section">
+    <div class="container">
+      <div class="filter-buttons" id="filterButtons">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="水回り">水回り</button>
+        <button class="filter-btn" data-filter="内装">内装</button>
+        <button class="filter-btn" data-filter="リノベーション">リノベーション</button>
+        <button class="filter-btn" data-filter="原状回復">原状回復</button>
+        <button class="filter-btn" data-filter="店舗">店舗</button>
+        <button class="filter-btn" data-filter="その他">その他</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+    カードグリッド
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ▼ 事例を追加するには ▼
+    下記のカードブロックをコピーして貼り付けてください。
+    - data-category: フィルタ用カテゴリ（カンマ区切りで複数指定可）
+    - href: 個別ページへのリンク
+    - img src: サムネイル画像のパス
+    - .works-card-tag: タグ（複数可）
+    - .works-card-title: タイトル
+    - 費用目安 / 工期: メタ情報
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ======================================== -->
+  <section class="works-grid-section">
+    <div class="container">
+      <div class="works-grid" id="worksGrid">
+
+        <!-- ========================================
+          ▼▼▼ 事例カード ここから ▼▼▼
+          ※ このブロックをコピーして追加してください
+          ※ data-category にフィルタ用のカテゴリを指定
+        ======================================== -->
+        <a href="toilet-installation.html" class="works-card fade-in" data-category="水回り">
+          <div class="works-card-thumb">
+            <!-- ▼ サムネイル画像を変更 ▼ -->
+            <img src="../images/toilet-completed.jpg" alt="兵庫県 倉庫内トイレ新設工事">
+          </div>
+          <div class="works-card-body">
+            <div class="works-card-tags">
+              <!-- ▼ タグ ▼ -->
+              <span class="works-card-tag">水回り</span>
+              <span class="works-card-tag">トイレ</span>
+            </div>
+            <!-- ▼ タイトル ▼ -->
+            <h3 class="works-card-title">兵庫県｜倉庫内トイレ新設工事</h3>
+            <div class="works-card-meta">
+              <!-- ▼ 費用目安 ▼ -->
+              <span><i class="fas fa-yen-sign"></i> 50万円〜</span>
+              <!-- ▼ 工期 ▼ -->
+              <span><i class="fas fa-calendar-alt"></i> 4日間</span>
+            </div>
+          </div>
+        </a>
+        <!-- ▲▲▲ 事例カード ここまで ▲▲▲ -->
+
+        <!-- ▼▼▼ 事例カード：ウッドデッキ ▼▼▼ -->
+        <a href="wooddeck.html" class="works-card fade-in" data-category="その他">
+          <div class="works-card-thumb">
+            <img src="../images/deck-completed.jpg" alt="大阪市内の事務所 ウッドデッキ新設">
+          </div>
+          <div class="works-card-body">
+            <div class="works-card-tags">
+              <span class="works-card-tag">その他</span>
+            </div>
+            <h3 class="works-card-title">大阪市内の事務所｜ウッドデッキ新設</h3>
+            <div class="works-card-meta">
+              <span><i class="fas fa-yen-sign"></i> 80万円〜</span>
+            </div>
+          </div>
+        </a>
+        <!-- ▲▲▲ 事例カード：ウッドデッキ ▲▲▲ -->
+
+        <!-- ▼▼▼ 事例カード：クロス張り替え ▼▼▼ -->
+        <a href="crosswall.html" class="works-card fade-in" data-category="内装">
+          <div class="works-card-thumb">
+            <img src="../images/cross-after.jpg" alt="大阪市 クロス張り替え工事">
+          </div>
+          <div class="works-card-body">
+            <div class="works-card-tags">
+              <span class="works-card-tag">内装</span>
+            </div>
+            <h3 class="works-card-title">大阪市｜クロス張り替え工事</h3>
+            <div class="works-card-meta">
+              <span><i class="fas fa-yen-sign"></i> 48万円〜</span>
+              <span><i class="fas fa-calendar-alt"></i> 7日間</span>
+            </div>
+          </div>
+        </a>
+        <!-- ▲▲▲ 事例カード：クロス張り替え ▲▲▲ -->
+
+        <!-- ▼▼▼ 事例カード：天井ボード張り替え ▼▼▼ -->
+        <a href="ceiling-board.html" class="works-card fade-in" data-category="内装">
+          <div class="works-card-thumb">
+            <img src="../images/ceiling-after.jpg" alt="大阪市 事務所内トイレ 天井ボード張り替え">
+          </div>
+          <div class="works-card-body">
+            <div class="works-card-tags">
+              <span class="works-card-tag">内装</span>
+            </div>
+            <h3 class="works-card-title">大阪市｜事務所内トイレ 天井ボード張り替え</h3>
+            <div class="works-card-meta">
+              <span><i class="fas fa-yen-sign"></i> 20万円〜</span>
+              <span><i class="fas fa-calendar-alt"></i> 2日間</span>
+            </div>
+          </div>
+        </a>
+        <!-- ▲▲▲ 事例カード：天井ボード張り替え ▲▲▲ -->
+
+        <!-- ========================================
+          ★ 新しい事例カードを追加する場合は、
+            上のカードブロック（▼▼▼〜▲▲▲）を
+            コピーして、ここに貼り付けてください。
+        ======================================== -->
+
+      </div>
+
+      <!-- 該当事例なしメッセージ -->
+      <div class="works-empty" id="worksEmpty">
+        <i class="fas fa-search"></i>
+        <p>該当する施工事例がありません。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+    CTA
+  ======================================== -->
+  <section class="works-cta">
+    <div class="container">
+      <h2>リフォームのご相談、<br class="sp-only">お気軽にどうぞ</h2>
+      <p>お見積もり無料・ご相談無料。お住まいのお悩みをお聞かせください。</p>
+      <div class="works-cta-buttons">
+        <a href="../index.html#contact" class="btn btn-white"><i class="fas fa-envelope"></i> お問い合わせ</a>
+        <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="btn btn-line"><i class="fab fa-line"></i> LINE で相談</a>
+        <a href="tel:07041751099" class="btn btn-outline-white"><i class="fas fa-phone"></i> 070-4175-1099</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+    フッター
+  ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="../images/logo.png" alt="NS HOME" class="footer-logo">
+          <p class="footer-company">株式会社 NS HOME</p>
+          <p class="footer-address">〒536-0021<br>大阪府大阪市城東区諏訪1-8-11</p>
+          <p class="footer-tel"><a href="tel:07041751099"><i class="fas fa-phone"></i> 070-4175-1099</a></p>
+          <p class="footer-hours">月〜土 9:00〜18:00 ／ 日曜 要相談</p>
+        </div>
+        <div class="footer-nav">
+          <h4>メニュー</h4>
+          <ul>
+            <li><a href="../index.html">トップ</a></li>
+            <li><a href="../index.html#individual">一般のお客様へ</a></li>
+            <li><a href="../index.html#corporate">不動産・管理会社様へ</a></li>
+            <li><a href="../index.html#commercial">店舗・事業者様へ</a></li>
+            <li><a href="./index.html">施工事例</a></li>
+            <li><a href="../index.html#contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-service">
+          <h4>サービス</h4>
+          <ul>
+            <li>住宅リフォーム</li>
+            <li>水回りリフォーム</li>
+            <li>内装リフォーム</li>
+            <li>リノベーション</li>
+            <li>原状回復工事</li>
+            <li>空室対策リフォーム</li>
+            <li>店舗改装・内装工事</li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h4>お問い合わせ</h4>
+          <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="footer-line-btn">
+            <i class="fab fa-line"></i> 公式LINE
+          </a>
+          <a href="mailto:info.nshome.osaka@gmail.com" class="footer-mail-btn">
+            <i class="fas fa-envelope"></i> メール
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-note">※ 掲載画像はイメージです。</p>
+        <p class="footer-copyright">&copy; 2025 株式会社 NS HOME. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 固定ボタン（スマホ） -->
+  <div class="fixed-buttons">
+    <a href="tel:07041751099" class="fixed-btn fixed-phone" aria-label="電話する">
+      <i class="fas fa-phone-alt"></i>
+      <span>電話</span>
+    </a>
+    <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="fixed-btn fixed-line" aria-label="LINEで相談">
+      <i class="fab fa-line"></i>
+      <span>LINE</span>
+    </a>
+  </div>
+
+  <!-- トップに戻るボタン -->
+  <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // ========================================
+    // フィルタ機能
+    // ========================================
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.works-card');
+    const emptyMsg = document.getElementById('worksEmpty');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // アクティブ状態の切り替え
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const categories = card.dataset.category.split(',').map(c => c.trim());
+          if (filter === 'all' || categories.includes(filter)) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // 該当なしメッセージの表示切替
+        if (emptyMsg) {
+          emptyMsg.classList.toggle('visible', visibleCount === 0);
+        }
+      });
+    });
+
+    // ========================================
+    // フェードインアニメーション
+    // ========================================
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { root: null, rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+    fadeElements.forEach(el => fadeObserver.observe(el));
+
+    // ========================================
+    // ハンバーガーメニュー
+    // ========================================
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    if (hamburger && navMobile) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.classList.toggle('active');
+        navMobile.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      navMobile.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMobile.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // ========================================
+    // トップに戻るボタン
+    // ========================================
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+  });
+  </script>
+
+</body>
+</html>
