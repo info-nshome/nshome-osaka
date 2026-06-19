@@ -3,367 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ============================================================
-    ▼▼▼【編集①】ページタイトル ▼▼▼
-    「〇〇〇〇〇」を事例のタイトルに書き換えてください
-    例：大阪市城東区 キッチンリフォーム
-  ============================================================ -->
+  <!-- ▼ 編集：titleを施工事例名に変更 ▼ -->
   <title>〇〇〇〇〇｜施工事例｜NS HOME</title>
+  <!-- ▼ 編集：descriptionを施工事例の概要に変更 ▼ -->
   <meta name="description" content="NS HOMEの施工事例：〇〇〇〇〇の詳細をご紹介します。">
-
-  <!-- Google Fonts -->
+  <link rel="icon" href="../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="icon" href="../images/favicon.png">
-
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/works.css">
 </head>
 <body>
-
-  <!-- ========================================
-    ヘッダー（※ 編集不要）
-  ======================================== -->
   <header class="header" id="header">
     <div class="header-inner">
-      <a href="../index.html" class="logo">
-        <img src="../images/logo.png" alt="NS HOME ロゴ" class="logo-img">
-      </a>
-      <nav class="nav-desktop" aria-label="メインナビゲーション">
-        <ul class="nav-list">
-          <li><a href="../index.html">トップ</a></li>
-          <li><a href="../index.html#individual">一般のお客様へ</a></li>
-          <li><a href="../index.html#corporate">不動産・管理会社様へ</a></li>
-          <li><a href="../index.html#commercial">店舗・事業者様へ</a></li>
-          <li><a href="./index.html" style="color:#3D6B35;background-color:rgba(61,107,53,0.06);border-radius:6px;">施工事例</a></li>
-          <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <a href="../index.html#top" class="logo" aria-label="NS HOME トップへ"><img src="../images/logo.png" alt="NS HOME" class="logo-img"></a>
+      <nav class="nav-desktop" aria-label="メインナビゲーション"><ul class="nav-list"><li><a href="../index.html#top">トップ</a></li><li><a href="../about.html">NSHOMEについて</a></li><li><a href="../gallery.html">ギャラリー</a></li><li><a href="index.html" class="is-current">施工事例</a></li><li><a href="../blog/index.html">ブログ</a></li><li><a href="../faq.html">よくある質問</a></li><li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li></ul></nav>
+      <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
     </div>
-    <nav class="nav-mobile" id="navMobile" aria-label="モバイルナビゲーション">
-      <ul class="nav-mobile-list">
-        <li><a href="../index.html">トップ</a></li>
-        <li><a href="../index.html#individual">一般のお客様へ</a></li>
-        <li><a href="../index.html#corporate">不動産・管理会社様へ</a></li>
-        <li><a href="../index.html#commercial">店舗・事業者様へ</a></li>
-        <li><a href="./index.html">施工事例</a></li>
-        <li><a href="../index.html#contact">お問い合わせ</a></li>
-        <li class="nav-mobile-contact">
-          <a href="tel:07041751099"><i class="fas fa-phone"></i> 070-4175-1099</a>
-        </li>
-      </ul>
-    </nav>
+    <nav class="nav-mobile" id="navMobile" aria-label="モバイルナビゲーション"><ul class="nav-mobile-list"><li><a href="../index.html#top">トップ</a></li><li><a href="../about.html">NSHOMEについて</a></li><li><a href="../gallery.html">ギャラリー</a></li><li><a href="index.html">施工事例</a></li><li><a href="../blog/index.html">ブログ</a></li><li><a href="../faq.html">よくある質問</a></li><li><a href="../index.html#contact">お問い合わせ</a></li></ul></nav>
   </header>
 
-  <!-- ========================================
-    ページヘッダー（タイトル・タグ）
-  ======================================== -->
-  <section class="works-detail-header">
-    <div class="container">
-      <p class="breadcrumb">
-        <a href="../index.html">トップ</a>
-        <span>›</span>
-        <a href="./index.html">施工事例</a>
-        <span>›</span>
-        この事例
-      </p>
-
-      <!-- ============================================================
-        ▼▼▼【編集②】事例タイトル ▼▼▼
-        エリアと工事内容を含めたタイトルを記入してください
-        例：大阪市城東区｜キッチンリフォーム
-      ============================================================ -->
-      <h1 class="works-detail-title">〇〇市〇〇区｜〇〇リフォーム</h1>
-
-      <!-- ============================================================
-        ▼▼▼【編集③】タグ（工事の種類） ▼▼▼
-        必要な分だけタグを残して、不要なものは削除してください
-        タグ名は一覧ページのフィルタと合わせてください
-        （水回り / 内装 / リノベーション / 原状回復 / 店舗）
-      ============================================================ -->
-      <div class="works-detail-tags">
-        <span class="works-detail-tag">水回り</span>
-        <!-- <span class="works-detail-tag">内装</span> -->
-        <!-- <span class="works-detail-tag">リノベーション</span> -->
-        <!-- <span class="works-detail-tag">原状回復</span> -->
-        <!-- <span class="works-detail-tag">店舗</span> -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    詳細コンテンツ
-  ======================================== -->
-  <section class="works-detail-content">
-    <div class="container">
-      <div class="works-detail-inner">
-
-        <!-- ========================================
-          概要テーブル
-        ======================================== -->
-        <div class="works-info-table">
-          <table>
-            <tbody>
-              <!-- ============================================================
-                ▼▼▼【編集④】概要情報 ▼▼▼
-                各項目の内容を書き換えてください
-              ============================================================ -->
-              <tr>
-                <th>工事内容</th>
-                <td>〇〇リフォーム</td>
-              </tr>
-              <tr>
-                <th>エリア</th>
-                <td>大阪府〇〇市〇〇区</td>
-              </tr>
-              <tr>
-                <th>費用目安</th>
-                <td>約〇〇万円</td>
-              </tr>
-              <tr>
-                <th>工期</th>
-                <td>約〇週間</td>
-              </tr>
-            </tbody>
-          </table>
+  <main>
+    <section class="works-detail-header">
+      <div class="container page-hero-inner">
+        <div class="page-hero-copy">
+          <nav class="breadcrumb" aria-label="パンくず"><a href="../index.html">トップ</a><span>›</span><a href="index.html">施工事例</a><span>›</span><span>施工事例タイトル</span></nav>
+          <!-- ▼ 編集：施工事例タイトル ▼ -->
+          <h1 class="works-detail-title">〇〇市｜〇〇リフォーム</h1>
+          <!-- ▼ 編集：タグ ▼ -->
+          <div class="works-detail-tags"><span class="works-detail-tag">内装</span><span class="works-detail-tag">タグ</span></div>
         </div>
+        <div class="page-hero-visual image-frame" data-label="ページ写真">
+          <img src="../images/page-works.jpg" alt="マンション内装工事中の施工写真" class="js-fallback-img">
+        </div>
+      </div>
+    </section>
 
-        <!-- ========================================
-          ビフォーアフター写真
-        ======================================== -->
-        <div class="works-ba-section">
-          <h2><i class="fas fa-images" style="margin-right:8px;"></i>ビフォー・アフター</h2>
+    <section class="works-detail-content">
+      <div class="container">
+        <div class="works-detail-inner">
+          <div class="works-info-table fade-in">
+            <table><tbody>
+              <!-- ▼ 編集：工事概要 ▼ -->
+              <tr><th>工事内容</th><td>〇〇工事</td></tr>
+              <tr><th>エリア</th><td>〇〇市</td></tr>
+              <tr><th>費用目安</th><td>〇〇万円〜</td></tr>
+              <tr><th>工期</th><td>〇日間</td></tr>
+            </tbody></table>
+          </div>
 
-          <!-- ============================================================
-            ▼▼▼【編集⑤】ビフォーアフター写真 ▼▼▼
-
-            ■ 写真の追加方法:
-            1. 写真ファイルを images/ フォルダに入れる
-            2. 下記の img タグの src を画像パスに書き換える
-               例: src="../images/sample-before-1.jpg"
-            3. alt にも簡単な説明を入れる
-
-            ■ 写真を追加したい場合:
-            「▼ ビフォーアフター1組目」ブロックをコピーして
-            下に貼り付けてください。ラベルを「2組目」等に変更。
-
-            ■ まだ写真がない場合:
-            そのままにしておけばプレースホルダーが表示されます。
-          ============================================================ -->
-
-          <!-- ▼ ビフォーアフター 1組目 ▼ -->
-          <div class="ba-pair">
-            <p class="ba-pair-label">1. メインの変化</p>
+          <div class="works-ba-section fade-in">
+            <h2>ビフォー・アフター</h2>
             <div class="ba-images">
-
-              <!-- ビフォー写真 -->
-              <div class="ba-image-box placeholder">
-                <!-- ★ 写真がある場合は下記のように書き換え:
-                <div class="ba-image-box">
-                  <span class="ba-label ba-label-before">Before</span>
-                  <img src="../images/〇〇-before-1.jpg" alt="ビフォー：〇〇">
-                -->
-                <span class="ba-label ba-label-before">Before</span>
-                <i class="fas fa-camera"></i>
-                <span>写真を設定してください</span>
-              </div>
-
-              <div class="ba-arrow">
-                <i class="fas fa-arrow-right"></i>
-              </div>
-
-              <!-- アフター写真 -->
-              <div class="ba-image-box placeholder">
-                <!-- ★ 写真がある場合は下記のように書き換え:
-                <div class="ba-image-box">
-                  <span class="ba-label ba-label-after">After</span>
-                  <img src="../images/〇〇-after-1.jpg" alt="アフター：〇〇">
-                -->
-                <span class="ba-label ba-label-after">After</span>
-                <i class="fas fa-camera"></i>
-                <span>写真を設定してください</span>
-              </div>
-
+              <!-- ▼ 編集：Before画像 ▼ -->
+              <div class="ba-image-box"><span class="ba-label ba-label-before">Before</span><img src="../images/cross-before.jpg" alt="施工前"></div>
+              <div class="ba-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+              <!-- ▼ 編集：After画像 ▼ -->
+              <div class="ba-image-box"><span class="ba-label ba-label-after">After</span><img src="../images/cross-after.jpg" alt="施工後"></div>
             </div>
           </div>
-          <!-- ▲ ビフォーアフター 1組目 ここまで ▲ -->
 
-          <!-- ============================================================
-            ★ ビフォーアフターの組を追加する場合は、
-              上の「▼ ビフォーアフター 1組目 ▼」〜「▲ 1組目 ここまで ▲」
-              をコピーして、ここに貼り付けてください。
-              ラベルのテキストを適宜変更してください。
-          ============================================================ -->
-
-        </div>
-
-        <!-- ========================================
-          工事内容（本文）
-        ======================================== -->
-        <div class="works-body-section">
-          <h2><i class="fas fa-clipboard-list" style="margin-right:8px;"></i>工事内容</h2>
-
-          <!-- ============================================================
-            ▼▼▼【編集⑥】工事内容の本文 ▼▼▼
-            <p>タグで段落を区切って記入してください。
-            自由に文章を書いてOKです。
-          ============================================================ -->
-          <div class="works-body-text">
-            <p>ここに工事の詳細説明を記入してください。</p>
-            <p>お客様のご要望、施工のポイント、使用した設備・素材、工夫した点などを書くと、閲覧者にとってわかりやすい内容になります。</p>
+          <div class="works-body-section fade-in">
+            <h2>工事内容</h2>
+            <div class="works-body-text">
+              <!-- ▼ 編集：本文 ▼ -->
+              <p>施工内容の説明をここに入力してください。</p>
+            </div>
           </div>
-        </div>
 
-        <!-- 一覧に戻る -->
-        <div class="works-back">
-          <a href="./index.html"><i class="fas fa-arrow-left"></i> 施工事例一覧に戻る</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    CTA（※ 編集不要）
-  ======================================== -->
-  <section class="works-cta">
-    <div class="container">
-      <h2>リフォームのご相談、<br class="sp-only">お気軽にどうぞ</h2>
-      <p>お見積もり無料・ご相談無料。お住まいのお悩みをお聞かせください。</p>
-      <div class="works-cta-buttons">
-        <a href="../index.html#contact" class="btn btn-white"><i class="fas fa-envelope"></i> お問い合わせ</a>
-        <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="btn btn-line"><i class="fab fa-line"></i> LINE で相談</a>
-        <a href="tel:07041751099" class="btn btn-outline-white"><i class="fas fa-phone"></i> 070-4175-1099</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    フッター（※ 編集不要）
-  ======================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-info">
-          <img src="../images/logo.png" alt="NS HOME" class="footer-logo">
-          <p class="footer-company">株式会社 NS HOME</p>
-          <p class="footer-address">〒536-0021<br>大阪府大阪市城東区諏訪1-8-11</p>
-          <p class="footer-tel"><a href="tel:07041751099"><i class="fas fa-phone"></i> 070-4175-1099</a></p>
-          <p class="footer-hours">月〜土 9:00〜18:00 ／ 日曜 要相談</p>
-        </div>
-        <div class="footer-nav">
-          <h4>メニュー</h4>
-          <ul>
-            <li><a href="../index.html">トップ</a></li>
-            <li><a href="../index.html#individual">一般のお客様へ</a></li>
-            <li><a href="../index.html#corporate">不動産・管理会社様へ</a></li>
-            <li><a href="../index.html#commercial">店舗・事業者様へ</a></li>
-            <li><a href="./index.html">施工事例</a></li>
-            <li><a href="../index.html#contact">お問い合わせ</a></li>
-          </ul>
-        </div>
-        <div class="footer-service">
-          <h4>サービス</h4>
-          <ul>
-            <li>住宅リフォーム</li>
-            <li>水回りリフォーム</li>
-            <li>内装リフォーム</li>
-            <li>リノベーション</li>
-            <li>原状回復工事</li>
-            <li>空室対策リフォーム</li>
-            <li>店舗改装・内装工事</li>
-          </ul>
-        </div>
-        <div class="footer-contact-col">
-          <h4>お問い合わせ</h4>
-          <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="footer-line-btn">
-            <i class="fab fa-line"></i> 公式LINE
-          </a>
-          <a href="mailto:info.nshome.osaka@gmail.com" class="footer-mail-btn">
-            <i class="fas fa-envelope"></i> メール
-          </a>
+          <div class="works-back"><a href="index.html" class="btn btn-secondary"><i class="fas fa-arrow-left" aria-hidden="true"></i>施工事例一覧に戻る</a></div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-note">※ 掲載画像はイメージです。</p>
-        <p class="footer-copyright">&copy; 2025 株式会社 NS HOME. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
+  </main>
 
-  <!-- 固定ボタン（スマホ） -->
-  <div class="fixed-buttons">
-    <a href="tel:07041751099" class="fixed-btn fixed-phone" aria-label="電話する">
-      <i class="fas fa-phone-alt"></i>
-      <span>電話</span>
-    </a>
-    <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="fixed-btn fixed-line" aria-label="LINEで相談">
-      <i class="fab fa-line"></i>
-      <span>LINE</span>
-    </a>
-  </div>
-
-  <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // ハンバーガーメニュー
-    const hamburger = document.getElementById('hamburger');
-    const navMobile = document.getElementById('navMobile');
-    if (hamburger && navMobile) {
-      hamburger.addEventListener('click', () => {
-        const isOpen = hamburger.classList.toggle('active');
-        navMobile.classList.toggle('open');
-        hamburger.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
-      navMobile.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navMobile.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
-      });
-    }
-
-    // トップに戻るボタン
-    const backToTop = document.getElementById('backToTop');
-    if (backToTop) {
-      window.addEventListener('scroll', () => {
-        backToTop.classList.toggle('visible', window.scrollY > 400);
-      }, { passive: true });
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    // フェードインアニメーション
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          fadeObserver.unobserve(entry.target);
-        }
-      });
-    }, { root: null, rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
-    fadeElements.forEach(el => fadeObserver.observe(el));
-  });
-  </script>
-
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><img src="../images/logo.png" alt="NS HOME" class="footer-logo"><h3>NS HOME</h3><p>〒536-0021<br>大阪府大阪市城東区諏訪1-8-11</p><p><a href="tel:07041751099">070-4175-1099</a></p><p><a href="mailto:info.nshome.osaka@gmail.com">info.nshome.osaka@gmail.com</a></p></div><div><h4>ページ</h4><ul class="footer-links"><li><a href="../index.html#top">トップ</a></li><li><a href="../about.html">NSHOMEについて</a></li><li><a href="../gallery.html">ギャラリー</a></li><li><a href="index.html">施工事例</a></li><li><a href="../blog/index.html">ブログ</a></li><li><a href="../faq.html">よくある質問</a></li><li><a href="../index.html#contact">お問い合わせ</a></li></ul></div><div><h4>対応工事</h4><ul class="footer-links"><li>水回りリフォーム</li><li>内装・クロス張替え</li><li>フローリング・床</li><li>リノベーション</li><li>店舗内装</li></ul></div><div><h4>SNS</h4><div class="sns-links"><a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="sns-link"><i class="fab fa-line" aria-hidden="true"></i>LINE</a><a href="https://www.instagram.com/nshome_osaka/" target="_blank" rel="noopener noreferrer" class="sns-link"><i class="fab fa-instagram" aria-hidden="true"></i>@nshome_osaka</a></div></div></div><div class="footer-bottom">&copy; NS HOME All Rights Reserved.</div></div></footer>
+  <div class="fixed-buttons"><a href="tel:07041751099" class="fixed-btn fixed-phone"><i class="fas fa-phone" aria-hidden="true"></i><span>電話</span></a><a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="fixed-btn fixed-line"><i class="fab fa-line" aria-hidden="true"></i><span>LINE</span></a></div>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="ページトップへ戻る"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+  <script src="../js/main.js"></script>
 </body>
 </html>

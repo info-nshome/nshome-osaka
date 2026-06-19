@@ -13,637 +13,345 @@
   <meta property="og:image" content="https://nshome-osaka.com/images/favicon.png">
   <meta property="og:site_name" content="NS HOME">
   <link rel="canonical" href="https://nshome-osaka.com/">
-  
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- ========================================
-    ヘッダー / ナビゲーション
-  ======================================== -->
   <header class="header" id="header">
     <div class="header-inner">
-      <a href="#top" class="logo">
-        <img src="images/logo.png" alt="NS HOME ロゴ" class="logo-img">
+      <a href="index.html#top" class="logo" aria-label="NS HOME トップへ">
+        <img src="images/logo.png" alt="NS HOME" class="logo-img">
       </a>
       <nav class="nav-desktop" aria-label="メインナビゲーション">
         <ul class="nav-list">
-          <li><a href="#top">トップ</a></li>
-          <li><a href="#individual">一般のお客様へ</a></li>
-          <li><a href="#corporate">不動産・管理会社様へ</a></li>
-          <li><a href="#commercial">店舗・事業者様へ</a></li>
+          <li><a href="index.html#top" class="is-current">トップ</a></li>
+          <li><a href="about.html">NSHOMEについて</a></li>
+          <li><a href="gallery.html">ギャラリー</a></li>
           <li><a href="works/index.html">施工事例</a></li>
-          <li><a href="#flow">ご相談の流れ</a></li>
-          <li><a href="#company">会社案内</a></li>
-          <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+          <li><a href="blog/index.html">ブログ</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="index.html#contact" class="nav-cta">お問い合わせ</a></li>
         </ul>
       </nav>
-      <!-- モバイルメニューボタン -->
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
     </div>
-    <!-- モバイルナビゲーション -->
     <nav class="nav-mobile" id="navMobile" aria-label="モバイルナビゲーション">
       <ul class="nav-mobile-list">
-        <li><a href="#top">トップ</a></li>
-        <li><a href="#individual">一般のお客様へ</a></li>
-        <li><a href="#corporate">不動産・管理会社様へ</a></li>
-        <li><a href="#commercial">店舗・事業者様へ</a></li>
+        <li><a href="index.html#top">トップ</a></li>
+        <li><a href="about.html">NSHOMEについて</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
         <li><a href="works/index.html">施工事例</a></li>
-        <li><a href="#flow">ご相談の流れ</a></li>
-        <li><a href="#company">会社案内</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-        <li class="nav-mobile-contact">
-          <a href="tel:07041751099"><i class="fas fa-phone"></i> 070-4175-1099</a>
-        </li>
+        <li><a href="blog/index.html">ブログ</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="index.html#contact">お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ========================================
-    トップ / ヒーローセクション
-    ※ 添付画像のうち3枚のみ使用：living-skylight.jpg / kitchen.jpg / living-room.jpg
-  ======================================== -->
-  <section class="hero" id="top">
-    <!-- メインビジュアル：1枚固定 -->
-    <div class="hero-bg" style="background-image: url('images/living-skylight.jpg');"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-sub">大阪の住宅リフォーム・リノベーション</p>
-      <h1 class="hero-title">住まいを、<br class="sp-only">もっと心地よく。</h1>
-      <p class="hero-desc">住まいのお悩み、NS HOMEにお任せください。<br>水回りから内装、リノベーションまで、<br class="sp-only">お客様一人ひとりに寄り添った<br>ご提案をいたします。</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> 無料相談はこちら</a>
-        <a href="works/index.html" class="btn btn-outline-white"><i class="fas fa-hammer"></i> 施工事例を見る</a>
-      </div>
-    </div>
-    <!-- スクロールダウン -->
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    ごあいさつ / 代表メッセージ
-  ======================================== -->
-  <section class="section message-section" id="message">
-    <div class="container">
-      <div class="message-grid">
-        <div class="message-image fade-in">
-          <img src="images/representative.png" alt="代表 大串 修登" class="representative-img">
-          <p class="representative-name">代表　大串 修登</p>
+  <main id="top">
+    <section class="hero" aria-label="NS HOME メインビジュアル">
+      <div class="hero-slider">
+        <div class="hero-slide is-active">
+          <img src="images/hero1.jpg" alt="ウッドデッキ作業中の後ろ姿" class="js-fallback-img">
         </div>
-        <div class="message-text fade-in">
-          <h2 class="section-title-left">
-            <span class="title-en">Message</span>
-            <span class="title-ja">お客様の「理想の暮らし」を<br>カタチにします</span>
-          </h2>
-          <p>NS HOMEのホームページをご覧いただきありがとうございます。</p>
-          <p>私たちは大阪市を拠点に、住宅リフォーム・リノベーションを通じて、お客様の暮らしをより快適に、より豊かにするお手伝いをしています。</p>
-          <p>水回りのリフォームから内装工事、原状回復まで、住まいに関するお悩みは何でもご相談ください。お客様のご要望を丁寧にお伺いし、最適なプランをご提案いたします。</p>
-          <a href="#contact" class="btn btn-primary-green"><i class="fas fa-comment-dots"></i> お気軽にご相談ください</a>
+        <div class="hero-slide">
+          <img src="images/hero2.jpg" alt="軽天作業中の施工風景" class="js-fallback-img">
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    一般のお客様へ
-    ※ 写真1枚（kitchen.jpg）を使用
-    ※ サービスカードはアイコンのみで構成
-  ======================================== -->
-  <section class="section service-section" id="individual">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">For Homeowners</span>
-        <span class="title-ja">一般のお客様へ</span>
-      </h2>
-      <p class="section-lead fade-in">お住まいのお悩みやご要望に合わせて、最適なリフォームプランをご提案します。<br>小さな修繕から大規模リノベーションまで、お気軽にご相談ください。</p>
-
-      <!-- 施工イメージ（1枚） -->
-      <div class="gallery-single fade-in">
-        <img src="images/kitchen.jpg" alt="施工イメージ：キッチン">
+      <button class="hero-arrow prev" type="button" aria-label="前の写真へ"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+      <button class="hero-arrow next" type="button" aria-label="次の写真へ"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+      <div class="hero-dots" aria-label="スライド切り替え">
+        <button class="hero-dot is-active" type="button" aria-label="1枚目"></button>
+        <button class="hero-dot" type="button" aria-label="2枚目"></button>
       </div>
-
-      <!-- サービスカード（アイコンのみ） -->
-      <div class="service-icon-cards">
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-home"></i></div>
-          <h3>住宅リフォーム</h3>
-          <p>お住まいの劣化や不具合を修繕し、快適な住環境を取り戻します。間取りの変更や設備の交換など、ライフスタイルの変化に合わせた住まいづくりをサポートします。</p>
-        </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-faucet-drip"></i></div>
-          <h3>水回りリフォーム</h3>
-          <p>キッチン・浴室・トイレなど、毎日使う水回りを快適に。最新設備への交換や、使いやすいレイアウトへの変更で、日々の暮らしをもっと快適にします。</p>
-          <div class="service-tags">
-            <span class="tag">キッチン</span>
-            <span class="tag">浴室</span>
-            <span class="tag">トイレ</span>
+      <div class="hero-content">
+        <div class="hero-copy fade-in">
+          <p class="hero-label">大阪市城東区の住宅リフォーム・内装工事</p>
+          <h1 class="hero-title"><span>住まいを、</span><span>もっと心地よく。</span></h1>
+          <p class="hero-desc">職人歴13年の技術と、理想を一から形にする<span class="hero-desc-emphasis">造作力</span>。小回りのきく<span class="hero-desc-emphasis">スピード感</span>と<span class="hero-desc-emphasis">柔軟</span>さで、暮らしに合う住まいづくりをお手伝いします。</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">無料相談</a>
+            <a href="about.html" class="btn btn-outline-white">NSHOMEについて</a>
           </div>
         </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
-          <h3>内装リフォーム</h3>
-          <p>壁紙の張替え、フローリング工事、建具の交換など、お部屋の雰囲気を一新します。素材やカラーのコーディネートもお任せください。</p>
-        </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
-          <h3>リノベーション</h3>
-          <p>既存の住まいに新たな価値を。間取りの大幅な変更やデザインの刷新で、まるで新築のような住空間を実現します。お客様の理想の暮らしをカタチにします。</p>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================
-    不動産・管理会社様へ
-    ※ 写真1枚（apartment.jpg）を使用
-  ======================================== -->
-  <section class="section service-section service-section-alt" id="corporate">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">For Property Managers</span>
-        <span class="title-ja">不動産・管理会社様へ</span>
-      </h2>
-      <p class="section-lead fade-in">賃貸物件の価値向上・空室対策をトータルでサポートいたします。<br>オーナー様・管理会社様のパートナーとして、迅速かつ丁寧に対応します。</p>
-
-      <!-- 施工イメージ（1枚） -->
-      <div class="gallery-single fade-in">
-        <img src="images/apartment.jpg" alt="施工イメージ：賃貸物件">
-      </div>
-
-      <div class="service-icon-cards">
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-tools"></i></div>
-          <h3>原状回復工事</h3>
-          <p>入居者の退去後、次の入居に向けた原状回復工事を迅速に対応します。クロスの張替え、床の補修、ハウスクリーニングまで、ワンストップでお任せいただけます。</p>
-        </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-door-open"></i></div>
-          <h3>空室対策リフォーム</h3>
-          <p>入居率を向上させるためのリフォームをご提案します。ターゲット層に合わせた設備の導入や内装のリニューアルで、物件の競争力を高めます。</p>
-        </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-building"></i></div>
-          <h3>賃貸リフォーム</h3>
-          <p>賃貸物件の資産価値を維持・向上させるリフォームをご提案します。予算に応じた最適なプランで、オーナー様の収益改善に貢献します。</p>
-        </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>リノベーション提案</h3>
-          <p>築年数の経った物件に新たな価値を。トレンドを押さえたデザインリノベーションで、周辺物件との差別化を図り、物件の魅力を最大限に引き出します。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    店舗・事業者様へ
-    ※ 施工写真は準備中のためギャラリーなし
-  ======================================== -->
-  <section class="section service-section" id="commercial">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">For Business Owners</span>
-        <span class="title-ja">店舗・事業者様へ</span>
-      </h2>
-      <p class="section-lead fade-in">店舗の新装・改装工事をトータルサポートいたします。<br>開業前の内装相談からレイアウト変更まで、事業者様のニーズに合わせた空間づくりをお手伝いします。</p>
-
-      <!-- 施工写真準備中メッセージ -->
-      <div class="gallery-placeholder fade-in">
-        <div class="placeholder-inner">
-          <i class="fas fa-camera"></i>
-          <p>施工写真は準備中です</p>
-        </div>
-      </div>
-
-      <div class="service-icon-cards">
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-store"></i></div>
-          <h3>店舗改装</h3>
-          <p>飲食店・美容室・物販店など、業種に合わせた店舗改装を行います。お客様の目を引くデザインと、スタッフが働きやすい動線設計を両立させた空間をご提案します。</p>
-        </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
-          <h3>開業前の内装相談</h3>
-          <p>これから開業される事業者様へ、内装工事のプランニングからご相談いただけます。コンセプトに合った空間づくりを、予算やスケジュールに合わせてサポートいたします。</p>
-        </div>
-        <div class="service-icon-card fade-in">
-          <div class="service-icon"><i class="fas fa-th-large"></i></div>
-          <h3>レイアウト変更</h3>
-          <p>既存店舗のレイアウトを見直し、お客様の回遊性やスタッフの作業効率を改善します。間仕切りの変更や設備の移設など、営業への影響を最小限に抑えた施工が可能です。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    選ばれる理由
-  ======================================== -->
-  <section class="section reason-section">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">Why Choose Us</span>
-        <span class="title-ja">NS HOMEが選ばれる理由</span>
-      </h2>
-      <div class="reason-grid">
-        <div class="reason-card fade-in">
-          <div class="reason-number">01</div>
-          <div class="reason-icon"><i class="fas fa-comments"></i></div>
-          <h3>丁寧なヒアリング</h3>
-          <p>お客様のご要望や暮らしのお悩みを丁寧にお伺いし、最適なプランをご提案します。小さなことでもお気軽にご相談ください。</p>
-        </div>
-        <div class="reason-card fade-in">
-          <div class="reason-number">02</div>
-          <div class="reason-icon"><i class="fas fa-map-marked-alt"></i></div>
-          <h3>関西一円に対応</h3>
-          <p>大阪市を中心に、京都・兵庫・滋賀・奈良・和歌山まで幅広くカバー。地域に根ざしたスピーディーな対応が可能です。</p>
-        </div>
-        <div class="reason-card fade-in">
-          <div class="reason-number">03</div>
-          <div class="reason-icon"><i class="fas fa-hand-holding-usd"></i></div>
-          <h3>明確な料金提示</h3>
-          <p>お見積もりは無料。追加費用が発生する可能性がある場合も、事前にしっかりとご説明いたします。安心してお任せください。</p>
-        </div>
-        <div class="reason-card fade-in">
-          <div class="reason-number">04</div>
-          <div class="reason-icon"><i class="fas fa-clipboard-check"></i></div>
-          <h3>ワンストップ対応</h3>
-          <p>ご相談から施工、アフターフォローまで一貫してサポート。複数の業者に依頼する手間がなく、スムーズにリフォームを進められます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    ご相談の流れ
-  ======================================== -->
-  <section class="section flow-section" id="flow">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">Flow</span>
-        <span class="title-ja">ご相談の流れ</span>
-      </h2>
-      <p class="section-lead fade-in">お問い合わせからお引渡しまで、安心してお任せいただける流れをご紹介します。</p>
-
-      <div class="flow-timeline">
-        <div class="flow-step fade-in">
-          <div class="flow-step-number"><span>1</span></div>
-          <div class="flow-step-content">
-            <h3>お問い合わせ</h3>
-            <p>まずはお電話、LINE、メール、またはお問い合わせフォームよりお気軽にご連絡ください。ご相談内容を簡単にお伺いします。</p>
-            <div class="flow-contact-methods">
-              <span><i class="fas fa-phone"></i> 電話</span>
-              <span><i class="fab fa-line"></i> LINE</span>
-              <span><i class="fas fa-envelope"></i> メール</span>
-              <span><i class="fas fa-file-alt"></i> フォーム</span>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="services-layout">
+          <div class="service-photo fade-in">
+            <div class="image-frame" data-label="施工中写真">
+              <img src="images/service-toilet.jpg" alt="トイレリフォーム後の施工写真" class="js-fallback-img">
+            </div>
+          </div>
+          <div class="service-content fade-in">
+            <span class="section-kicker">Service</span>
+            <h2 class="section-title">対応工事</h2>
+            <p class="section-lead">気になるところがひとつでもあれば、お気軽にご相談ください。水回りから内装、店舗内装まで、現場の状況に合わせて丁寧に対応します。</p>
+            <div class="service-mobile-visual image-frame" data-label="施工中写真">
+              <img src="images/service-toilet.jpg" alt="トイレリフォーム後の施工写真" class="js-fallback-img">
+            </div>
+            <div class="service-groups" aria-label="対応工事一覧">
+              <div class="service-group">
+                <div class="service-group-title"><i class="fas fa-faucet-drip" aria-hidden="true"></i><span>水回り</span></div>
+                <div class="service-tags">
+                  <span>キッチン</span>
+                  <span>浴室</span>
+                  <span>トイレ</span>
+                  <span>洗面所</span>
+                </div>
+              </div>
+              <div class="service-group">
+                <div class="service-group-title"><i class="fas fa-ruler-combined" aria-hidden="true"></i><span>内装工事</span></div>
+                <div class="service-tags">
+                  <span>内装・クロス張替え</span>
+                  <span>フローリング・床</span>
+                  <span>建具</span>
+                  <span>間取り調整</span>
+                </div>
+              </div>
+              <div class="service-group">
+                <div class="service-group-title"><i class="fas fa-house-chimney" aria-hidden="true"></i><span>リノベ・店舗</span></div>
+                <div class="service-tags">
+                  <span>リノベーション</span>
+                  <span>店舗内装</span>
+                  <span>原状回復</span>
+                </div>
+              </div>
+            </div>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-secondary">小さなことでもご相談ください <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
-        <div class="flow-step fade-in">
-          <div class="flow-step-number"><span>2</span></div>
-          <div class="flow-step-content">
-            <h3>現地調査・ヒアリング</h3>
-            <p>お客様のもとへ訪問し、現場の状況を確認いたします。ご要望やご予算、理想のイメージなどを詳しくお伺いします。</p>
-          </div>
-        </div>
-        <div class="flow-step fade-in">
-          <div class="flow-step-number"><span>3</span></div>
-          <div class="flow-step-content">
-            <h3>プラン・お見積もりのご提案</h3>
-            <p>現地調査とヒアリングをもとに、最適なリフォームプランとお見積もりをご提案します。ご不明点は何でもお尋ねください。</p>
-          </div>
-        </div>
-        <div class="flow-step fade-in">
-          <div class="flow-step-number"><span>4</span></div>
-          <div class="flow-step-content">
-            <h3>ご契約</h3>
-            <p>プラン・お見積もりにご納得いただけましたら、ご契約となります。工事のスケジュールなどを詳しくご説明いたします。</p>
-          </div>
-        </div>
-        <div class="flow-step fade-in">
-          <div class="flow-step-number"><span>5</span></div>
-          <div class="flow-step-content">
-            <h3>施工</h3>
-            <p>経験豊富な職人が丁寧に施工いたします。工事中の進捗状況も随時ご報告させていただきます。</p>
-          </div>
-        </div>
-        <div class="flow-step fade-in">
-          <div class="flow-step-number"><span>6</span></div>
-          <div class="flow-step-content">
-            <h3>完了・お引渡し</h3>
-            <p>施工完了後、お客様と一緒に仕上がりを確認いたします。ご満足いただけましたらお引渡しとなります。お引渡し後もお困りのことがございましたらお気軽にご連絡ください。</p>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================
-    対応エリア
-  ======================================== -->
-  <section class="section area-section">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">Service Area</span>
-        <span class="title-ja">対応エリア</span>
-      </h2>
-      <div class="area-content fade-in">
-        <div class="area-main">
-          <div class="area-badge"><i class="fas fa-map-marker-alt"></i> 大阪市を中心に</div>
-          <h3>関西一円に対応しています</h3>
-          <div class="area-tags">
-            <span class="area-tag area-tag-main">大阪府</span>
-            <span class="area-tag">京都府</span>
-            <span class="area-tag">兵庫県</span>
-            <span class="area-tag">滋賀県</span>
-            <span class="area-tag">奈良県</span>
-            <span class="area-tag">和歌山県</span>
+    <section class="section section-alt" id="works">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Works</span>
+            <h2 class="section-title">施工事例</h2>
+            <p class="section-lead">これまでにお手伝いした工事を、写真とあわせてご紹介します。仕上がりや現場の雰囲気を見ると、相談内容も少しイメージしやすくなります。</p>
           </div>
-          <p class="area-note">上記以外のエリアもご相談ください。可能な限り対応いたします。</p>
+          <a href="works/index.html" class="btn btn-secondary">もっと見る</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    会社案内
-  ======================================== -->
-  <section class="section company-section" id="company">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">Company</span>
-        <span class="title-ja">会社案内</span>
-      </h2>
-
-      <div class="company-card fade-in">
-        <table class="company-table">
-          <tbody>
-            <tr>
-              <th>会社名</th>
-              <td>NS HOME</td>
-            </tr>
-            <tr>
-              <th>代表</th>
-              <td>大串 修登</td>
-            </tr>
-            <tr>
-              <th>事業内容</th>
-              <td>住宅リフォーム・リノベーション、原状回復工事、賃貸リフォーム、店舗改装・内装工事</td>
-            </tr>
-            <tr>
-              <th>所在地</th>
-              <td>〒536-0021<br>大阪府大阪市城東区諏訪1-8-11</td>
-            </tr>
-            <tr>
-              <th>電話番号</th>
-              <td><a href="tel:07041751099">070-4175-1099</a></td>
-            </tr>
-            <tr>
-              <th>メール</th>
-              <td><a href="mailto:info.nshome.osaka@gmail.com">info.nshome.osaka@gmail.com</a></td>
-            </tr>
-            <tr>
-              <th>営業時間</th>
-              <td>月〜土曜日 9:00〜18:00<br><span class="sunday-note">日曜日は要相談（お気軽にご相談ください！）</span></td>
-            </tr>
-            <tr>
-              <th>対応エリア</th>
-              <td>大阪市を中心に関西一円（大阪 / 京都 / 兵庫 / 滋賀 / 奈良 / 和歌山）</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- ========================================
-    お問い合わせ
-  ======================================== -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <h2 class="section-title fade-in">
-        <span class="title-en">Contact</span>
-        <span class="title-ja">お問い合わせ</span>
-      </h2>
-      <p class="section-lead fade-in">リフォームのご相談・お見積もりは無料です。<br>お気軽にお問い合わせください。</p>
-
-      <!-- 連絡方法カード -->
-      <div class="contact-methods fade-in">
-        <a href="tel:07041751099" class="contact-method-card">
-          <div class="contact-method-icon phone-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <h3>お電話</h3>
-          <p class="contact-number">070-4175-1099</p>
-          <p class="contact-hours">月〜土 9:00〜18:00<br><small>日曜日もお気軽にご相談ください</small></p>
-        </a>
-
-        <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="contact-method-card">
-          <div class="contact-method-icon line-icon">
-            <i class="fab fa-line"></i>
-          </div>
-          <h3>公式LINE</h3>
-          <p class="contact-line-desc">LINEで簡単にお問い合わせ</p>
-          <p class="contact-line-note">写真を送っていただくだけで<br>概算のご相談も可能です</p>
-        </a>
-
-        <a href="mailto:info.nshome.osaka@gmail.com" class="contact-method-card">
-          <div class="contact-method-icon mail-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h3>メール</h3>
-          <p class="contact-email">info.nshome.osaka@gmail.com</p>
-          <p class="contact-mail-note">24時間受付中<br>2営業日以内にご返信します</p>
-        </a>
-      </div>
-
-      <!-- お問い合わせフォーム -->
-      <div class="contact-form-wrapper fade-in">
-        <h3 class="form-heading"><i class="fas fa-file-alt"></i> お問い合わせフォーム</h3>
-        <form id="contactForm" class="contact-form" action="https://formsubmit.co/info.nshome.osaka@gmail.com" method="POST">
-          <!-- FormSubmit設定 -->
-          <input type="hidden" name="_subject" value="NS HOME HP お問い合わせ">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://nshome-osaka.com/?thanks=1">
-          <input type="hidden" name="_autoresponse" value="お問い合わせありがとうございます。NS HOMEです。内容を確認の上、2営業日以内にご連絡いたします。">
-          <input type="text" name="_honey" style="display:none">
-          
-          <div class="form-group">
-            <label for="formName" class="form-label">
-              お名前 <span class="required">必須</span>
-            </label>
-            <input type="text" id="formName" name="name" required placeholder="例：山田 太郎" class="form-input">
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="formEmail" class="form-label">
-                メールアドレス <span class="required">必須</span>
-              </label>
-              <input type="email" id="formEmail" name="email" required placeholder="例：sample@example.com" class="form-input">
+        <div class="works-preview-grid">
+          <a href="works/wooddeck.html" class="work-card work-card-large fade-in">
+            <div class="image-frame" data-label="施工事例写真">
+              <img src="images/deck-completed.jpg" alt="大阪市内の事務所 ウッドデッキ新設" class="js-fallback-img">
             </div>
-            <div class="form-group">
-              <label for="formPhone" class="form-label">
-                電話番号
-              </label>
-              <input type="tel" id="formPhone" name="phone" placeholder="例：070-1234-5678" class="form-input">
+            <div class="work-card-body">
+              <div class="work-meta"><span class="work-tag">外構</span></div>
+              <h3 class="work-card-title">大阪市内の事務所｜ウッドデッキ新設</h3>
+            </div>
+          </a>
+          <a href="works/toilet-installation.html" class="work-card fade-in">
+            <div class="image-frame" data-label="施工事例写真">
+              <img src="images/toilet-completed.jpg" alt="兵庫県 倉庫内トイレ新設工事" class="js-fallback-img">
+            </div>
+            <div class="work-card-body">
+              <div class="work-meta"><span class="work-tag">水回り</span></div>
+              <h3 class="work-card-title">兵庫県｜倉庫内トイレ新設工事</h3>
+            </div>
+          </a>
+          <a href="works/crosswall.html" class="work-card fade-in">
+            <div class="image-frame" data-label="施工事例写真">
+              <img src="images/cross-after.jpg" alt="大阪市 クロス張り替え工事" class="js-fallback-img">
+            </div>
+            <div class="work-card-body">
+              <div class="work-meta"><span class="work-tag">内装</span></div>
+              <h3 class="work-card-title">大阪市｜クロス張り替え工事</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-standalone" aria-label="現場の様子">
+      <div class="container">
+        <div class="gallery-strip fade-in">
+          <div>
+            <h3>現場の様子を見る</h3>
+            <p>施工中や施工前後の様子、職人の仕事風景をギャラリーでご紹介しています。</p>
+          </div>
+          <div class="gallery-strip-thumbs">
+            <div class="image-frame" data-label="現場写真">
+              <img src="images/skill1.jpg" alt="店舗・倉庫内装の軽天フレーム施工" class="js-fallback-img">
+            </div>
+            <div class="image-frame" data-label="現場写真">
+              <img src="images/skill2.jpg" alt="天井軽天とエアコン周辺の施工風景" class="js-fallback-img">
+            </div>
+            <div class="image-frame" data-label="現場写真">
+              <img src="images/work1.jpg" alt="住まいの改修前の現地確認" class="js-fallback-img">
+            </div>
+            <div class="image-frame" data-label="現場写真">
+              <img src="images/work2.jpg" alt="室内のカーペット仕上げ" class="js-fallback-img">
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="formCategory" class="form-label">
-              ご相談内容
-            </label>
-            <select id="formCategory" class="form-input">
-              <option value="">選択してください</option>
-              <option value="home_reform">住宅リフォーム</option>
-              <option value="water_reform">水回りリフォーム（キッチン/浴室/トイレ）</option>
-              <option value="interior_reform">内装リフォーム</option>
-              <option value="renovation">リノベーション</option>
-              <option value="restoration">原状回復工事</option>
-              <option value="vacancy_reform">空室対策リフォーム</option>
-              <option value="rental_reform">賃貸リフォーム</option>
-              <option value="shop_reform">店舗改装・内装工事</option>
-              <option value="shop_consultation">開業前の内装相談</option>
-              <option value="layout_change">レイアウト変更</option>
-              <option value="other">その他</option>
-            </select>
-            <input type="hidden" id="formCategoryHidden" name="category" value="">
-          </div>
-
-          <div class="form-group">
-            <label for="formMessage" class="form-label">
-              お問い合わせ内容 <span class="required">必須</span>
-            </label>
-            <textarea id="formMessage" name="message" required rows="6" placeholder="ご相談内容をご自由にお書きください。具体的なご要望やお悩み、ご予算感などをお伝えいただけるとスムーズにご案内できます。" class="form-input"></textarea>
-          </div>
-
-          <div class="form-privacy">
-            <label class="checkbox-label">
-              <input type="checkbox" id="formPrivacy" required>
-              <span class="checkbox-custom"></span>
-              <span>個人情報の取り扱いに同意の上、送信します</span>
-            </label>
-          </div>
-
-          <div class="form-submit">
-            <button type="submit" class="btn btn-primary-green btn-large" id="submitBtn">
-              <i class="fas fa-paper-plane"></i> 送信する
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-    CTA（お問い合わせへの誘導）
-  ======================================== -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content fade-in">
-        <h2>住まいのお悩み、<br class="sp-only">まずはお気軽にご相談ください</h2>
-        <p>お見積もり無料・ご相談無料。LINEでも受付中！</p>
-        <div class="cta-buttons">
-          <a href="#contact" class="btn btn-white"><i class="fas fa-envelope"></i> お問い合わせフォーム</a>
-          <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="btn btn-line"><i class="fab fa-line"></i> LINE で相談</a>
-          <a href="tel:07041751099" class="btn btn-outline-white"><i class="fas fa-phone"></i> 070-4175-1099</a>
+          <a href="gallery.html" class="gallery-strip-next" aria-label="ギャラリーへ">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================
-    フッター
-  ======================================== -->
+    <section class="section" id="flow">
+      <div class="container">
+        <div class="center fade-in">
+          <span class="section-kicker">Flow</span>
+          <h2 class="section-title">ご相談の流れ</h2>
+          <p class="section-lead">はじめてのリフォームでも安心して進められるよう、ひとつずつ丁寧にご説明します。</p>
+        </div>
+        <div class="flow-list">
+          <div class="flow-step fade-in"><span class="flow-number">1</span><div><h3>お問い合わせ</h3><p>電話・LINE・フォームからお気軽にご相談ください。</p></div></div>
+          <div class="flow-step fade-in"><span class="flow-number">2</span><div><h3>現地調査・ヒアリング</h3><p>担当者が現場を確認し、ご要望やお困りごとを伺います。</p></div></div>
+          <div class="flow-step fade-in"><span class="flow-number">3</span><div><h3>プラン・お見積もり</h3><p>現場内容をもとに、最適なプランとお見積もりをご提案します。</p></div></div>
+          <div class="flow-step fade-in"><span class="flow-number">4</span><div><h3>ご契約</h3><p>内容にご納得いただいたうえで、ご契約となります。</p></div></div>
+          <div class="flow-step fade-in"><span class="flow-number">5</span><div><h3>施工</h3><p>経験豊富な職人が、丁寧に施工を行います。</p></div></div>
+          <div class="flow-step fade-in"><span class="flow-number">6</span><div><h3>完了・お引渡し</h3><p>最終確認を行い、お引渡しとなります。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Contact</span>
+            <h2 class="section-title">お問い合わせ</h2>
+            <p class="section-lead">ご相談・お見積もりは無料です。写真だけでは分からないことも、まずはお気軽にお聞かせください。小さなお困りごとから一緒に整理します。</p>
+          </div>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-cards fade-in">
+            <a href="tel:07041751099" class="contact-card">
+              <span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+              <div><h3>電話で相談する</h3><p><strong>070-4175-1099</strong><br>月〜土曜日 9:00〜18:00</p></div>
+            </a>
+            <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <span class="contact-icon"><i class="fab fa-line" aria-hidden="true"></i></span>
+              <div><h3>LINEで相談する</h3><p>工事中の進捗報告にも使える、気軽な相談窓口です。</p></div>
+            </a>
+            <a href="mailto:info.nshome.osaka@gmail.com" class="contact-card">
+              <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+              <div><h3>メールで相談する</h3><p>info.nshome.osaka@gmail.com</p></div>
+            </a>
+          </div>
+          <div class="form-box fade-in">
+            <h3 class="form-heading">フォームからのお問い合わせ</h3>
+            <form id="contactForm" action="https://formsubmit.co/info.nshome.osaka@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="NS HOME HP お問い合わせ">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://nshome-osaka.com/?thanks=1">
+              <input type="hidden" name="_autoresponse" value="お問い合わせありがとうございます。NS HOMEです。内容を確認の上、2営業日以内にご連絡いたします。">
+              <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="formName">お名前 <span class="required">必須</span></label>
+                  <input class="form-input" id="formName" name="name" type="text" required placeholder="例：山田 太郎">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="formEmail">メールアドレス <span class="required">必須</span></label>
+                  <input class="form-input" id="formEmail" name="email" type="email" required placeholder="例：sample@example.com">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="formPhone">電話番号</label>
+                  <input class="form-input" id="formPhone" name="phone" type="tel" placeholder="例：070-1234-5678">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="formCategory">ご相談内容</label>
+                  <select class="form-select" id="formCategory">
+                    <option value="">選択してください</option>
+                    <option value="kitchen">キッチン</option>
+                    <option value="bath">浴室</option>
+                    <option value="toilet">トイレ</option>
+                    <option value="washroom">洗面所</option>
+                    <option value="interior">内装・クロス張替え</option>
+                    <option value="floor">フローリング・床</option>
+                    <option value="renovation">リノベーション</option>
+                    <option value="shop">店舗内装</option>
+                    <option value="other">その他</option>
+                  </select>
+                  <input type="hidden" id="formCategoryHidden" name="category" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formMessage">お問い合わせ内容 <span class="required">必須</span></label>
+                <textarea class="form-textarea" id="formMessage" name="message" required placeholder="ご相談内容、ご希望時期、ご予算感などをご自由にお書きください。"></textarea>
+              </div>
+              <div class="form-submit">
+                <button class="btn btn-primary" id="submitBtn" type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i> 送信する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-info">
+        <div>
           <img src="images/logo.png" alt="NS HOME" class="footer-logo">
-          <p class="footer-company">株式会社 NS HOME</p>
-          <p class="footer-address">〒536-0021<br>大阪府大阪市城東区諏訪1-8-11</p>
-          <p class="footer-tel"><a href="tel:07041751099"><i class="fas fa-phone"></i> 070-4175-1099</a></p>
-          <p class="footer-hours">月〜土 9:00〜18:00 ／ 日曜 要相談</p>
+          <h3>NS HOME</h3>
+          <p>〒536-0021<br>大阪府大阪市城東区諏訪1-8-11</p>
+          <p><a href="tel:07041751099">070-4175-1099</a></p>
+          <p><a href="mailto:info.nshome.osaka@gmail.com">info.nshome.osaka@gmail.com</a></p>
         </div>
-        <div class="footer-nav">
-          <h4>メニュー</h4>
-          <ul>
-            <li><a href="#top">トップ</a></li>
-            <li><a href="#individual">一般のお客様へ</a></li>
-            <li><a href="#corporate">不動産・管理会社様へ</a></li>
-            <li><a href="#commercial">店舗・事業者様へ</a></li>
+        <div>
+          <h4>ページ</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#top">トップ</a></li>
+            <li><a href="about.html">NSHOMEについて</a></li>
+            <li><a href="gallery.html">ギャラリー</a></li>
             <li><a href="works/index.html">施工事例</a></li>
-            <li><a href="#flow">ご相談の流れ</a></li>
-            <li><a href="#company">会社案内</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="blog/index.html">ブログ</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="index.html#contact">お問い合わせ</a></li>
           </ul>
         </div>
-        <div class="footer-service">
-          <h4>サービス</h4>
-          <ul>
-            <li>住宅リフォーム</li>
+        <div>
+          <h4>対応工事</h4>
+          <ul class="footer-links">
             <li>水回りリフォーム</li>
-            <li>内装リフォーム</li>
+            <li>内装・クロス張替え</li>
+            <li>フローリング・床</li>
             <li>リノベーション</li>
-            <li>原状回復工事</li>
-            <li>空室対策リフォーム</li>
-            <li>店舗改装・内装工事</li>
+            <li>店舗内装</li>
           </ul>
         </div>
-        <div class="footer-contact-col">
-          <h4>お問い合わせ</h4>
-          <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="footer-line-btn">
-            <i class="fab fa-line"></i> 公式LINE
-          </a>
-          <a href="mailto:info.nshome.osaka@gmail.com" class="footer-mail-btn">
-            <i class="fas fa-envelope"></i> メール
-          </a>
+        <div>
+          <h4>SNS</h4>
+          <div class="sns-links">
+            <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="sns-link"><i class="fab fa-line" aria-hidden="true"></i>LINE</a>
+            <a href="https://www.instagram.com/nshome_osaka/" target="_blank" rel="noopener noreferrer" class="sns-link"><i class="fab fa-instagram" aria-hidden="true"></i>@nshome_osaka</a>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-note">※ 掲載画像はイメージです。</p>
-        <p class="footer-copyright">&copy; 2025 株式会社 NS HOME. All Rights Reserved.</p>
-      </div>
+      <div class="footer-bottom">&copy; NS HOME All Rights Reserved.</div>
     </div>
   </footer>
 
-  <!-- ========================================
-    固定ボタン（LINE & 電話）- スマホ表示
-  ======================================== -->
   <div class="fixed-buttons">
-    <a href="tel:07041751099" class="fixed-btn fixed-phone" aria-label="電話する">
-      <i class="fas fa-phone-alt"></i>
-      <span>電話</span>
-    </a>
-    <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="fixed-btn fixed-line" aria-label="LINEで相談">
-      <i class="fab fa-line"></i>
-      <span>LINE</span>
-    </a>
+    <a href="tel:07041751099" class="fixed-btn fixed-phone"><i class="fas fa-phone" aria-hidden="true"></i><span>電話</span></a>
+    <a href="https://lin.ee/Tio6nJl" target="_blank" rel="noopener noreferrer" class="fixed-btn fixed-line"><i class="fab fa-line" aria-hidden="true"></i><span>LINE</span></a>
   </div>
-
-  <!-- トップに戻るボタン -->
-  <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
+  <button class="back-to-top" id="backToTop" type="button" aria-label="ページトップへ戻る"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
   <script src="js/main.js"></script>
 </body>
 </html>

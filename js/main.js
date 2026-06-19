@@ -1,204 +1,195 @@
-/* ========================================
-   NS HOME - メインJavaScript
-   ======================================== */
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  // ========================================
-  // 1. ハンバーガーメニュー（モバイル）
-  // ========================================
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('navMobile');
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+  const header = document.getElementById("header");
+  const hamburger = document.getElementById("hamburger");
+  const navMobile = document.getElementById("navMobile");
 
   if (hamburger && navMobile) {
-    hamburger.addEventListener('click', () => {
-      const isOpen = hamburger.classList.toggle('active');
-      navMobile.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
-      // メニュー開閉時のbodyスクロール制御
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    hamburger.addEventListener("click", () => {
+      const isOpen = hamburger.classList.toggle("active");
+      navMobile.classList.toggle("open", isOpen);
+      hamburger.setAttribute("aria-expanded", String(isOpen));
+      body.style.overflow = isOpen ? "hidden" : "";
     });
 
-    // モバイルナビのリンクをクリックしたらメニューを閉じる
-    navMobile.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMobile.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+    navMobile.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMobile.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+        body.style.overflow = "";
       });
     });
   }
 
-  // ========================================
-  // 2. スクロール時のフェードインアニメーション
-  // ========================================
-  const fadeElements = document.querySelectorAll('.fade-in');
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -60px 0px',
-    threshold: 0.1
-  };
-
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target); // 一度表示したら監視を解除
-      }
-    });
-  }, observerOptions);
-
-  fadeElements.forEach(el => fadeObserver.observe(el));
-
-  // ========================================
-  // 3. トップに戻るボタン
-  // ========================================
-  const backToTop = document.getElementById('backToTop');
-
-  if (backToTop) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    }, { passive: true });
-
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // ========================================
-  // 4. ヘッダーのスクロール時縮小
-  // ========================================
-  const header = document.getElementById('header');
-
-  if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-      } else {
-        header.style.boxShadow = '0 1px 10px rgba(0, 0, 0, 0.06)';
-      }
-    }, { passive: true });
-  }
-
-  // ========================================
-  // 5. スムーズスクロール（Safari対応強化）
-  // ========================================
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const targetId = anchor.getAttribute('href');
-      if (targetId === '#') return;
-
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const targetId = anchor.getAttribute("href");
+      if (!targetId || targetId === "#") return;
       const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        const headerHeight = header ? header.offsetHeight : 0;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
+      if (!target) return;
+      event.preventDefault();
+      const headerHeight = header ? header.offsetHeight : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+      window.scrollTo({ top, behavior: "smooth" });
     });
   });
 
-  // ========================================
-  // 6. お問い合わせフォームの送信処理
-  // ========================================
-  const contactForm = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
+  const fadeElements = document.querySelectorAll(".fade-in");
+  if ("IntersectionObserver" in window && fadeElements.length) {
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -60px 0px", threshold: 0.12 });
+    fadeElements.forEach((element) => fadeObserver.observe(element));
+  } else {
+    fadeElements.forEach((element) => element.classList.add("visible"));
+  }
 
-  // select変更時にhiddenフィールドへ日本語テキストをセット
-  const categorySelect = document.getElementById('formCategory');
-  const categoryHidden = document.getElementById('formCategoryHidden');
-
-  if (categorySelect && categoryHidden) {
-    categorySelect.addEventListener('change', () => {
-      categoryHidden.value = categorySelect.value ? categorySelect.options[categorySelect.selectedIndex].text : '';
+  const backToTop = document.getElementById("backToTop");
+  if (backToTop) {
+    window.addEventListener("scroll", () => {
+      backToTop.classList.toggle("visible", window.scrollY > 420);
+    }, { passive: true });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
-  if (contactForm && submitBtn) {
-    contactForm.addEventListener('submit', (e) => {
-      // 送信直前にもhiddenフィールドを確実に更新
-      if (categorySelect && categoryHidden && categorySelect.value) {
-        categoryHidden.value = categorySelect.options[categorySelect.selectedIndex].text;
+  const slides = Array.from(document.querySelectorAll(".hero-slide"));
+  const dots = Array.from(document.querySelectorAll(".hero-dot"));
+  const prev = document.querySelector(".hero-arrow.prev");
+  const next = document.querySelector(".hero-arrow.next");
+  let slideIndex = 0;
+  let slideTimer;
+
+  function showSlide(index) {
+    if (!slides.length) return;
+    slideIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, idx) => slide.classList.toggle("is-active", idx === slideIndex));
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("is-active", idx === slideIndex);
+      dot.setAttribute("aria-current", idx === slideIndex ? "true" : "false");
+    });
+  }
+
+  function queueSlide() {
+    window.clearInterval(slideTimer);
+    if (slides.length > 1) {
+      slideTimer = window.setInterval(() => showSlide(slideIndex + 1), 5200);
+    }
+  }
+
+  if (slides.length) {
+    showSlide(0);
+    queueSlide();
+    dots.forEach((dot, idx) => {
+      dot.addEventListener("click", () => {
+        showSlide(idx);
+        queueSlide();
+      });
+    });
+    prev?.addEventListener("click", () => {
+      showSlide(slideIndex - 1);
+      queueSlide();
+    });
+    next?.addEventListener("click", () => {
+      showSlide(slideIndex + 1);
+      queueSlide();
+    });
+  }
+
+  document.querySelectorAll(".js-fallback-img").forEach((img) => {
+    const markMissing = () => {
+      const imageFrame = img.closest(".image-frame");
+      if (imageFrame) {
+        imageFrame.classList.add("is-missing");
+        return;
       }
+      img.closest(".hero-slide")?.classList.add("is-missing");
+    };
+    if (img.complete && img.naturalWidth === 0) {
+      markMissing();
+    }
+    img.addEventListener("error", () => {
+      markMissing();
+    });
+  });
 
-      // 送信ボタンの二重クリック防止
+  document.querySelectorAll(".faq-question").forEach((button) => {
+    button.addEventListener("click", () => {
+      const answerId = button.getAttribute("aria-controls");
+      const answer = answerId ? document.getElementById(answerId) : null;
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!isOpen));
+      answer?.classList.toggle("open", !isOpen);
+    });
+  });
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const worksCards = document.querySelectorAll(".works-card");
+  const worksEmpty = document.getElementById("worksEmpty");
+
+  if (filterButtons.length && worksCards.length) {
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        const filter = button.dataset.filter || "all";
+        let visibleCount = 0;
+
+        worksCards.forEach((card) => {
+          const categories = (card.dataset.category || "").split(",").map((item) => item.trim());
+          const visible = filter === "all" || categories.includes(filter);
+          card.classList.toggle("hidden", !visible);
+          if (visible) visibleCount += 1;
+        });
+
+        worksEmpty?.classList.toggle("visible", visibleCount === 0);
+      });
+    });
+  }
+
+  const categorySelect = document.getElementById("formCategory");
+  const categoryHidden = document.getElementById("formCategoryHidden");
+  if (categorySelect && categoryHidden) {
+    const setCategoryText = () => {
+      categoryHidden.value = categorySelect.value ? categorySelect.options[categorySelect.selectedIndex].text : "";
+    };
+    categorySelect.addEventListener("change", setCategoryText);
+    setCategoryText();
+  }
+
+  const contactForm = document.getElementById("contactForm");
+  const submitBtn = document.getElementById("submitBtn");
+  if (contactForm && submitBtn) {
+    contactForm.addEventListener("submit", () => {
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
-
-      // 5秒後にボタンを復元（安全策）
-      setTimeout(() => {
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> 送信中...';
+      window.setTimeout(() => {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> 送信する';
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> 送信する';
       }, 5000);
     });
   }
 
-  // ========================================
-  // 6-2. 送信完了後のサンクスメッセージ表示
-  // ========================================
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('thanks') === '1') {
-    // サンクスモーダルを表示
-    const thanksModal = document.createElement('div');
-    thanksModal.id = 'thanksModal';
-    thanksModal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:10000;padding:20px;';
-    thanksModal.innerHTML = `
-      <div style="background:#fff;border-radius:16px;padding:48px 32px;max-width:500px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:fadeInUp 0.5s ease;">
-        <div style="width:72px;height:72px;background:#3D6B35;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-          <i class="fas fa-check" style="color:#fff;font-size:32px;"></i>
-        </div>
-        <h3 style="font-size:1.5rem;color:#2c2c2c;margin-bottom:12px;font-family:'Noto Serif JP',serif;">送信完了しました</h3>
-        <p style="color:#666;line-height:1.8;margin-bottom:8px;">お問い合わせありがとうございます。</p>
-        <p style="color:#666;line-height:1.8;margin-bottom:24px;">内容を確認の上、2営業日以内にご連絡いたします。</p>
-        <button onclick="document.getElementById('thanksModal').remove();history.replaceState(null,'',window.location.pathname);" style="background:#3D6B35;color:#fff;border:none;padding:14px 40px;border-radius:8px;font-size:1rem;cursor:pointer;font-weight:600;">閉じる</button>
+  const thanksParams = new URLSearchParams(window.location.search);
+  if (thanksParams.get("thanks") === "1") {
+    const modal = document.createElement("div");
+    modal.style.cssText = "position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.52);";
+    modal.innerHTML = `
+      <div style="width:min(460px,100%);padding:34px;border-radius:8px;background:#fff;text-align:center;box-shadow:0 22px 70px rgba(0,0,0,.22);">
+        <p style="margin:0 0 8px;color:#2D5A27;font-family:'Noto Serif JP',serif;font-size:1.35rem;font-weight:700;">送信完了しました</p>
+        <p style="margin:0 0 22px;color:#66706A;line-height:1.8;">お問い合わせありがとうございます。内容を確認の上、2営業日以内にご連絡いたします。</p>
+        <button type="button" class="btn btn-primary" id="thanksClose">閉じる</button>
       </div>
     `;
-    document.body.appendChild(thanksModal);
-    // URLからパラメータを除去（ブラウザ履歴を汚さない）
-    history.replaceState(null, '', window.location.pathname);
+    document.body.appendChild(modal);
+    history.replaceState(null, "", window.location.pathname);
+    document.getElementById("thanksClose")?.addEventListener("click", () => modal.remove());
   }
-
-  // ========================================
-  // 7. 現在のナビゲーションハイライト
-  // ========================================
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-desktop .nav-list a[href^="#"]');
-
-  function highlightNav() {
-    let current = '';
-    const scrollPos = window.scrollY + 100;
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.style.color = '';
-      link.style.backgroundColor = '';
-      if (link.getAttribute('href') === `#${current}`) {
-        if (!link.classList.contains('nav-cta')) {
-          link.style.color = '#3D6B35';
-          link.style.backgroundColor = 'rgba(61, 107, 53, 0.06)';
-        }
-      }
-    });
-  }
-
-  window.addEventListener('scroll', highlightNav, { passive: true });
-  highlightNav(); // 初期実行
-
 });
