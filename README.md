@@ -43,11 +43,6 @@
 3. 大阪市｜クロス張り替え工事（内装）— `works/crosswall.html`
 4. 大阪市｜事務所内トイレ 天井ボード張り替え（内装）— `works/ceiling-board.html`
 
-#### 施工事例テンプレート（works/template.html）
-- **コピーして使えるテンプレート**
-- 編集箇所にわかりやすいコメント（【編集①】〜【編集⑥】）
-- ビフォーアフター写真の追加手順をコメント内に詳細に記載
-
 ### 機能・実装内容
 - ✅ レスポンシブ対応（PC / タブレット / スマートフォン）
 - ✅ ハンバーガーメニュー（モバイル）
@@ -93,36 +88,44 @@ images/
   └── favicon.png           ファビコン/OGP画像
 works/
   ├── index.html            施工事例一覧ページ（フィルタ付き）
-  ├── template.html         施工事例テンプレート（コピー用）
   ├── toilet-installation.html  施工事例：兵庫県 倉庫内トイレ新設工事
   ├── wooddeck.html         施工事例：大阪市内の事務所 ウッドデッキ新設
   ├── crosswall.html        施工事例：大阪市 クロス張り替え工事
   └── ceiling-board.html    施工事例：大阪市 事務所内トイレ 天井ボード張り替え
+_redirects                  Netlify用リダイレクト設定
+sitemap.xml                 Google向けサイトマップ
 README.md                   本ファイル
 ```
 
 ## エントリーURI
-- `/index.html` - メインページ（トップ）
-- `/index.html#top` - トップ
-- `/index.html#individual` - 一般のお客様へ
-- `/index.html#corporate` - 不動産・管理会社様へ
-- `/index.html#commercial` - 店舗・事業者様へ
-- `/index.html#flow` - ご相談の流れ
-- `/index.html#company` - 会社案内
-- `/index.html#contact` - お問い合わせ
-- `/works/index.html` - 施工事例一覧
-- `/works/toilet-installation.html` - 施工事例：兵庫県 倉庫内トイレ新設工事
-- `/works/wooddeck.html` - 施工事例：大阪市内の事務所 ウッドデッキ新設
-- `/works/crosswall.html` - 施工事例：大阪市 クロス張り替え工事
-- `/works/ceiling-board.html` - 施工事例：大阪市 事務所内トイレ 天井ボード張り替え
-- `/works/template.html` - テンプレート（公開用ではなく編集用）
+- `/` - メインページ（トップ）
+- `/#top` - トップ
+- `/#individual` - 一般のお客様へ
+- `/#corporate` - 不動産・管理会社様へ
+- `/#commercial` - 店舗・事業者様へ
+- `/#flow` - ご相談の流れ
+- `/#company` - 会社案内
+- `/#contact` - お問い合わせ
+- `/about` - NSHOMEについて
+- `/gallery` - ギャラリー
+- `/works/` - 施工事例一覧
+- `/works/toilet-installation` - 施工事例：兵庫県 倉庫内トイレ新設工事
+- `/works/wooddeck` - 施工事例：大阪市内の事務所 ウッドデッキ新設
+- `/works/crosswall` - 施工事例：大阪市 クロス張り替え工事
+- `/works/ceiling-board` - 施工事例：大阪市 事務所内トイレ 天井ボード張り替え
+- `/blog/` - ブログ一覧
+- `/blog/kitchen-reform-cost-osaka` - ブログ記事：キッチンリフォームの費用相場
+- `/faq` - よくある質問
+
+`.html` 付きの旧URLは `_redirects` で拡張子なしURLへ301リダイレクトします。
 
 ## 施工事例の追加手順
 
 ### 個別ページの追加
-1. `works/template.html` をコピーして新しいファイル名にする（例: `works/bathroom-reform.html`）
-2. コメント内の【編集①】〜【編集⑥】の指示に従って内容を書き換える
-3. ビフォーアフター写真は `images/` に保存し、コメント内の手順でパスを設定
+1. 既存の施工事例ページをコピーして新しいファイル名にする（例: `works/bathroom-reform.html`）
+2. タイトル、description、canonical、本文、画像パスを書き換える
+3. ビフォーアフター写真は `images/` に保存し、ページ内の画像パスを設定する
+4. `sitemap.xml` に拡張子なしの正規URLを追加する
 
 ### 一覧ページへのカード追加
 1. `works/index.html` を開く
